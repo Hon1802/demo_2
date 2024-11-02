@@ -1,0 +1,18 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "target": "esnext",                     // Đặt phiên bản ECMAScript mà bạn muốn biên dịch 
+    "strict": true,                         // Bật chế độ nghiêm ngặt
+    "baseUrl": ".",                         // Đường dẫn cơ sở cho việc tìm kiếm các mô-đun
+    "paths": {
+      "~/*": ["src/*"]                     // Đường dẫn tùy chỉnh cho các mô-đun
+    },
+    "esModuleInterop": true,                // Hỗ trợ cho interop với ES Modules
+    "skipLibCheck": true,                   // Bỏ qua kiểm tra kiểu cho các tệp .d.ts
+    "forceConsistentCasingInFileNames": true // Bắt buộc phân biệt chữ hoa chữ thường trong tên tệp
+  },
+}
