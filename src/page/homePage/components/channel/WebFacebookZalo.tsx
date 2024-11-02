@@ -83,8 +83,14 @@ const WebInput: React.FC<UserInputProps> = ({ onInputSubmit }) => {
     >
       <Box
         sx={{
-          width: '70vw',
-          height: '80vh',
+          width: {
+            xs: '90vw', // Chiều rộng cho mobile
+            md: '70vw'  // Chiều rộng cho desktop
+          },
+          height: {
+            xs: '88vh', // Chiều cao cho mobile
+            md: '80vh'  // Chiều cao cho desktop
+          },
           borderRadius: '50px',
           boxShadow: '-4px 0px 10px 10px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1)',
           display: 'inline-flex',
@@ -132,7 +138,10 @@ const WebInput: React.FC<UserInputProps> = ({ onInputSubmit }) => {
             sx={{
               fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
               fontWeight: 600,
-              fontSize: '1.3rem',
+              fontSize:{
+                xs: '1rem', // Chiều rộng cho mobile
+                md: '1.3rem'  // Chiều rộng cho desktop
+              },
               maxWidth: '80%',
               lineHeight: 1.5,
               letterSpacing: '0.00938em',
@@ -159,8 +168,14 @@ const WebInput: React.FC<UserInputProps> = ({ onInputSubmit }) => {
               display: 'inline-flex',
               flexDirection: 'column',
               justifyContent: 'space-evenly',
-              width: '80%',
-              height: '80%',
+              width: {
+                xs: '95%', // Chiều rộng cho màn hình nhỏ (mobile)
+                md: '80%'  // Chiều rộng cho màn hình lớn hơn (tablet, desktop)
+              },
+              height: {
+                xs: '95%', // Chiều cao cho màn hình nhỏ
+                md: '80%'  // Chiều cao cho màn hình lớn
+              },
               background: '#fff',
               padding: '20px',
               borderRadius: '30px',
